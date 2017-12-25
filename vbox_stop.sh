@@ -10,7 +10,6 @@ if [ $# -eq 0 ]; then
 fi
 
 VMNAME=$1
-DATE=`date "+%Y%m%d%H%M%S"`
-VBoxManage snapshot "${VMNAME}" take ${DATE}
+VBoxManage controlvm "${VMNAME}" savestate
 
 
